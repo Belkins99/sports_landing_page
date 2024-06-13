@@ -6,17 +6,48 @@ body {
     /* overflow-x: hidden; */
 }
 
+header {
+    position: relative; 
+    height: 100vh; 
+    width: 100%; 
+    overflow: hidden; 
+}
 
 
-#header-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/pitch.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    padding: 2rem 10rem;
-    font-family: Arial, Helvetica, sans-serif;
+.video-background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    overflow: hidden;
+    filter: brightness(50%);
+     
+}
+
+
+
+#bg-video {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    
+}
+
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
 
 }
+
+
+
 
 #logo {
     text-decoration: none;
@@ -29,8 +60,12 @@ body {
 #nav-links {
     display: flex;
     justify-content: space-between;
-
+    align-items: center; 
+    padding: 20px; 
+    z-index: 1; 
+    position: relative; 
 }
+
 
 #nav-links a:hover {
     color: aqua;
@@ -41,13 +76,14 @@ body {
     display: flex;
     gap: 30px;
     list-style: none;
-
 }
+
 
 .navitems {
     text-decoration: none;
     color: white;
 }
+
 
 .btn {
     background-color: transparent;
@@ -55,20 +91,23 @@ body {
     border-radius: 2rem;
     border: 2px solid white;
     color: white;
-
+    
 }
+
 
 #bot {
     font-size: 20px;
     margin-top: 10%;
     margin-left: 7rem;
     padding: 10px 30px;
-
+    
 }
+
 
 .btn a {
     text-decoration: none;
     color: white;
+    
 }
 
 .header-text {
@@ -77,16 +116,22 @@ body {
     font-size: 1.5rem;
     margin-left: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative; 
+    z-index: 1; 
 }
+
 
 .header-text h2 {
     font-size: 3rem;
     color: goldenrod;
+    text-align: center;
 }
+
 
 .header-text h1 {
     font-size: 5rem;
 }
+
 
 
 .about-section {
@@ -198,7 +243,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.p a{
+.p a {
     text-decoration: none;
 }
 
@@ -215,7 +260,7 @@ body {
     width: 90%;
 }
 
-.newImage:hover{
+.newImage:hover {
     background-color: rgba(0, 0, 0, 0.473);
 }
 
@@ -232,13 +277,14 @@ body {
     text-align: center;
 }
 
-.video{
+.video {
     width: 100%;
-    
+    /* position: relative; */
+
 }
 
-.video button{
-    padding: 1rem ;
+.video button {
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.705);
     margin-left: 35rem;
     border-radius: 3rem;
@@ -246,15 +292,15 @@ body {
     margin-top: 2rem;
 }
 
-.video button:hover{
+.video button:hover {
     background-color: blue;
-    
+
 }
 
-.video button a{
+.video button a {
     text-decoration: none;
     color: antiquewhite;
-   
+
 }
 
 .tables {
@@ -276,20 +322,20 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    
+
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    
+
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    
+
 }
 
 th,
@@ -325,7 +371,7 @@ tr:nth-child(even) {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
-    background-color: rgba(137, 43, 226, 0.158);  
+    background-color: rgba(137, 43, 226, 0.158);
     padding-left: 10px;
     font-weight: bolder;
     display: grid;
@@ -334,8 +380,8 @@ tr:nth-child(even) {
 
 }
 
-.tables button{
-    padding: 1rem ;
+.tables button {
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.705);
     margin-left: 4rem;
     border-radius: 3rem;
@@ -343,64 +389,91 @@ tr:nth-child(even) {
     margin-top: 2rem;
 }
 
-.tables button a{
+.tables button a {
     text-decoration: none;
     color: antiquewhite;
 }
 
-.tables button:hover{
+.tables button:hover {
     background-color: blue;
-    
+
 }
 
 
 
-.logo{
+.logo {
     width: 40%;
 }
 
-.loop{
+.loop {
     width: 30%;
 }
 
-/* .ft-img{
-align-items: center;
-    display: flex;
-    margin-left: 5rem;
-} */
-
 .ft-img {
-    display: grid;
-    grid-template-columns: git;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
 }
 
-footer h4{
-color: antiquewhite;
-margin-left: 5rem;
+.parent {
+    display: flex;
+    padding: 2rem;
 }
 
-footer img{
+
+
+.soc {
+    display: flex;
+    flex-direction: column;
+}
+
+.soc h4 {
+    margin-left: 8rem;
+}
+
+
+footer h4 {
+    color: antiquewhite;
+    margin-left: 5rem;
+}
+
+footer img {
     width: 24px;
     padding: 1rem;
-    
+
 }
 
-footer{
+footer {
     background-color: rgba(10, 10, 37, 0.911);
     align-items: center;
 }
 
-footer p{
-    padding: 1rem;
+footer p {
+    /* padding: 1rem; */
     color: antiquewhite;
     font-weight: bolder;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.ft-btn{
+.ft-btn {
     text-align: center;
     border-radius: 20px solid rgba(0, 0, 0, 0.582);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     background-color: black;
+}
+
+.sp{
+    display: flex;
+    flex-direction: column;
+    line-height: -10rem;
+    
+}
+
+.sp p{
+    margin-left: 4rem;
+}
+
+.pat p{
+    margin-left: 5rem;
 }
