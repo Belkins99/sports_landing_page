@@ -7,32 +7,32 @@ body {
 }
 
 header {
-    position: relative; 
-    height: 100vh; 
-    width: 100%; 
-    overflow: hidden; 
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 
 .video-background {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    z-index: -1; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     overflow: hidden;
-    filter: brightness(50%);
-     
+    filter: brightness(40%);
+
 }
 
 
 
 #bg-video {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-    
+    height: 100%;
+    object-fit: cover;
+
 }
 
 
@@ -42,7 +42,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
+    z-index: -1;
 
 }
 
@@ -57,13 +57,22 @@ header {
     font-weight: bolder;
 }
 
+#span{
+    color: rgba(0, 128, 0, 0.904);
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #nav-links {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    padding: 20px; 
-    z-index: 1; 
-    position: relative; 
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.356);
+    position: fixed;
+    width: 100%;
 }
 
 
@@ -76,48 +85,58 @@ header {
     display: flex;
     gap: 30px;
     list-style: none;
+    font-size: 1rem;
 }
 
 
 .navitems {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
 
 .btn {
-    background-color: transparent;
+    background-color: black;
     padding: 2px 26px;
     border-radius: 2rem;
     border: 2px solid white;
     color: white;
-    
+    font-size: 20px;
 }
 
 
 #bot {
-    font-size: 20px;
+
     margin-top: 10%;
     margin-left: 7rem;
     padding: 10px 30px;
-    
+    margin-right: 3rem;
+}
+
+#but{
+    font-size: 15px;
+    margin-right: 3rem;
+    padding: 1rem;
 }
 
 
 .btn a {
     text-decoration: none;
     color: white;
-    
+
+
 }
 
 .header-text {
     color: white;
-    margin-top: 6rem;
+    margin-top: 10rem;
     font-size: 1.5rem;
     margin-left: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
 
@@ -135,10 +154,10 @@ header {
 
 
 .about-section {
-    margin: 2rem 6rem;
+    margin-top: 3rem;
     display: flex;
     gap: 4rem;
-
+    background-color: rgba(0, 0, 0, 0.178)
 }
 
 .images {
@@ -152,12 +171,15 @@ header {
 .about-text {
     width: 50%;
     font-size: 20px;
+    margin-left: 4rem;
 
 }
 
 .about-text h3 {
     color: orangered;
-    font-size: smaller;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .about-text h1 {
@@ -208,9 +230,8 @@ header {
     width: 100%;
 }
 
-.serve-text h3 {
-    color: orangered;
-    font-size: smaller;
+.serve-text P{
+    font-size: 1rem;
 }
 
 .serve-text h1 {
@@ -218,8 +239,9 @@ header {
 }
 
 .image a {
-    color: orangered;
+    color: rgba(0, 0, 0, 0.699);
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .serve-btn {
@@ -254,15 +276,27 @@ header {
 
 .newImage {
     text-align: center;
+    transition: transform .1s;
 }
 
 .newImage img {
     width: 90%;
+
+}
+
+.newImage p{
+    font-weight: bold;
 }
 
 .newImage:hover {
     background-color: rgba(0, 0, 0, 0.473);
+    -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
 }
+
+
+
 
 
 .row {
@@ -270,7 +304,10 @@ header {
 }
 
 .live {
-    background-color: rgba(0, 0, 0, 0.438);
+    /* background-color: rgba(0, 0, 0, 0.438); */
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .live1 {
@@ -278,10 +315,47 @@ header {
 }
 
 .video {
-    width: 100%;
-    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 6rem;
+    width: 70%;
+    margin: auto;
+    
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
+    border-radius: 6px;
+    gap: 5rem;
 
 }
+
+
+.thy {
+    margin-top: 3rem;
+    width: 100%;
+    
+    
+}
+
+.thy p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+.thy a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
 
 .video button {
     padding: 1rem;
@@ -458,22 +532,24 @@ footer p {
 .ft-btn {
     text-align: center;
     border-radius: 20px solid rgba(0, 0, 0, 0.582);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(245, 222, 179, 0.233);
+    padding: 5px;
 
     background-color: black;
-}
-
-.sp{
-    display: flex;
-    flex-direction: column;
-    line-height: -10rem;
     
 }
 
-.sp p{
+.sp {
+    display: flex;
+    flex-direction: column;
+    line-height: -10rem;
+
+}
+
+.sp p {
     margin-left: 4rem;
 }
 
-.pat p{
+.pat p {
     margin-left: 5rem;
 }
